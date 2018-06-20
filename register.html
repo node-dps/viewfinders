@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/reg.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+</head>
+<body>
+        <div class = "nav" id = "Topnav">
+                <a class = "nav-item" href = "index.html">Node</a>
+                <a class = "nav-item" href = "alpha.html">Alphanode</a>
+                <a class = "nav-item" href = "http://decode.nodeclub.xyz/leaderboard">DecodeNode</a>
+                <a class = "nav-item" href = "alum.html">Alumni</a>
+                <a class = "nav-item" href = "index.html">Updates</a>
+                <a class = "nav-item" id = "active" href = "register.html">Join Us</a>
+                <a href="javascript:void(0);" style="font-size:30px;margin-right:2%;" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+    <div class = "form">
+        <h1 align = "center">Want to be a part of the team ?</h1>
+            <form>
+                <br><br>
+                <label id = "font">First Name:</label>  
+                <br> 
+                <input type = "text" required> <br>
+                <label id = "font" style="text-align: left">Last Name:</label>
+                <br>
+                <input type = "text" required> <br>
+                <br>
+                <label id = "font">Gender:</label>
+                <input type = "radio" name = "r1"><label id = "font"> Male</label>    <input type = "radio" name = "r1"> <label id = "font"> Female</label>
+                <br><br>
+                <label id = "font">Field Of Interest:</label>
+                <br><br>
+                <select required>
+                    <option selected disabled>Choose Your Skill</option>
+                    <option>Web Development</option>
+                    <option>Digital Imaging</option>
+                    <option>Motion Graphics</option>
+                    <option>3D Modelling</option>
+                    <option>Group Discussion</option>
+                    <option>Quizzing</option>
+                    <option>Robotics</option>
+                    <option>Cubing</option>
+                    <option>Cryptic Hunt</option>
+                    <option>Photography</option>
+                    <option>Programming</option>
+                    <option>App Development</option>
+                    </select>
+                    <br>
+                <label id = "font">Enter Your E-mail Address:</label>
+                <br>
+                <input type = "email" required>
+                <br><br>
+                <label id = "font">Class</label>
+                <br>
+                <select required>
+                        <option selected disabled>Choose your class</option>
+                        <option>6th</option>
+                        <option>7th</option>
+                        <option>8th</option>
+                        <option>9th</option>
+                        <option>10th</option>
+                        <option>11th</option>
+                        <option>12th</option>
+                        </select>
+                <br><br>
+                <label id = "font">Mobile Number:</label>
+                <br>
+                <input type = "number" maxlength = "10" required>
+                <br><br>
+                <center>
+                <input type = "submit" onclick = "alert('Your request has been submitted.')">    
+            </center>
+                </form>
+
+    </div>
+    <script>
+        function myFunction() {
+    var x = document.getElementById("Topnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+	}
+}
+    </script>
+</body>
+</html>

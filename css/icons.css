@@ -1,0 +1,71 @@
+:root{
+	--menu-w: 20px;
+	--menu-h: 2px;
+	--menu-m: 5px;
+	--color: rgba(248,248,248,0.9);
+}
+
+span[class*=menu]:before{
+	display: block;
+	content: '';
+	position: relative;
+	top: -10px;
+	left: calc(var(--menu-m)*(-1));
+	height: var(--menu-h);
+	width: var(--menu-w);
+	margin: var(--menu-m);
+	background-color: var(--color);
+}
+span[class*=menu]{
+	display: block;
+	position: relative;
+	width: var(--menu-w);
+	height: var(--menu-h);
+	margin: calc(var(--menu-m) + 20px);
+	background-color: var(--color);
+	transition: 0s;
+}
+span[class*=menu]:after{
+	display: block;
+	content: '';
+	position: relative;
+	left: calc(var(--menu-m)*(-1));
+	bottom: 7px;
+	height: var(--menu-h);
+	width: var(--menu-w);
+	margin: var(--menu-m);
+	background-color: var(--color);
+}
+
+span.menu2:before, span.menu2, span.menu2:after{background-color: var(--blue)}
+
+div#down-arrow{
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: 100px;
+	opacity: 0;
+	transform: translateX(-50%);
+	transition: all 0.5s 0.2s;
+}
+
+span.down-arrow{
+	display: block;
+	width: 20px;
+	height: 2px;
+	background-color: white;
+	border-radius: 360px;
+	transform: rotate(30deg);
+}
+span.down-arrow:after{
+	display: block;
+	content: '';
+	position: relative;
+	top: -8px;
+	left: 14px;
+	width: 20px;
+	height: 2px;
+	background-color: white;
+	border-radius: 360px;
+	transform: rotate(-60deg);
+}

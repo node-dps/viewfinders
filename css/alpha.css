@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg,#003366, #284360);
+    overflow-x: hidden;
+    font-family: "Abel";
+}
+
+* {
+    transition: all ease 0.2s;
+}
+.contain {
+    height: 100vh;
+    width: 100%;
+    background: url('maclab.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.land {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    animation: move 2s forwards 4s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+path {
+    stroke: #fff;
+    fill: #fff;
+    stroke-dasharray: 1000;
+    opacity: 10;
+    animation: appear 4s cubic-bezier(0,0.23,1,.1) forwards;
+}
+.line {
+    height: 150px;
+    width: 4px;
+    background: #fff;
+    position: absolute;
+    top: 60%;
+    left: 58%;
+    opacity: 0;
+    animation: show 2s forwards 5s;
+}
+.text {
+    color: #8cc63f;
+    font-size: 100px;
+    font-family: "Abel";
+    font-weight: bold;
+    position: absolute;
+    top: 62%;
+    left: 62%;
+    opacity: 0;
+    animation: show1 2s forwards 6s;
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 1000;
+    }
+    30% {
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 1000;
+    }
+    90% {
+        fill: rgba(255,255,255,0);
+    }
+    100% {
+        opacity: 10;
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes move {
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(-90%, -50%)
+    }
+}
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes show1 {
+    form {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .text {
+        font-size: 30px;
+        top: 67.5%;
+        left: 63%;
+    }
+    .line {
+        height: 75px;
+        top: 65%;
+    }
+}
+
+.events {
+    display: block;
+    padding: 15%;
+    padding-top: 5%;
+    color: #f2f2f2;
+    height: auto;
+}
+.first {
+    font-size: 3em;
+}
+@media only screen and (max-width: 480px) {
+    .content1 {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .first h1 {
+        font-size: 30px;
+    }
+    .text {
+        font-size: 27px;
+        top: 67.3%;
+        left: 63%;
+        font-family: "Abel";
+    }
+    .line {
+        height: 75px;
+        top: 64.5%;
+        width: 1.2px;
+    }
+}
+#active {
+    background: #f2f2f2;
+    color: #003366;
+}
+.footer {
+    height: auto;
+    background: #101010;
+    color: white;
+    padding: 5%;
+    font-size: 2em;
+    display: flex;
+}
+.accordion {
+    background-color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    padding: 3%;
+    font-family: "Abel";
+    color: white;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 3em;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 2%;
+    font-size: 1.5em;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background: rgba(0,0,0,0.4);
+    border-bottom: #8cc63f 2px solid;
+}
+@media only screen and (max-width: 600px) {
+
+    .accordian {
+        font-size: 2em;
+    }
+    .panel {
+        font-size: 1em;
+    }
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .accordion {
+        font-size: 1.7em;
+    }
+     #googleMap {
+        display: none;
+    }
+
+}
+
+  .register {
+    display: flex;
+    height: auto;
+    font-size: 1.3em;
+    width: 150px;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    padding: 3%;
+    text-align: center;
+    border: 0px;
+}
+.register:hover {
+    background: rgba(0,0,0,0.6);
+    border-bottom: 2px inset #8cc63f;
+    cursor: pointer;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background: linear-gradient(45deg,#003366, #284360);
+    color: white;
+    border: 1px solid #888;
+    width: 80%;
+    font-size: 20px;
+    padding: 20px;
+    margin: auto;
+}
+.modal-content p {
+    font-size: 2em;
+}
+
+/* The Close Button */
+.close {
+    color: #fefefe;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+.green {
+    color: #8cc63f;
+}
+form {
+    margin: 0;
+}

@@ -37,7 +37,7 @@ span[class*=menu]:after{
 	background-color: var(--color);
 }
 
-span.menu2:before, span.menu2, span.menu2:after{background-color: var(--blue)}
+span.menu2:before, span.menu2, span.menu2:after{background-color: var(--white)}
 
 div#down-arrow{
 	display: block;

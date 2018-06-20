@@ -15,7 +15,7 @@
 
 
 	/* variables */
-	--bg-navbar: transparent;
+	--bg-navbar: transparent; /* unused variable */
 	--fg-navbar: var(--white);
 
 	--navbar-h: 10vh;
@@ -25,17 +25,17 @@
 
 	--box-shadow-color: rgba(20,20,20,0.5);
 
-	--nav-item-hover: var(--white);
-	--nav-item-hover-color: var(--blue);
+	--nav-item-hover: var(--black);
+	--nav-item-hover-color: var(--white);
 
 	--nav-item-selected: rgb(246,246,246);
-	--nav-item-selected-color: var(--blue);
+	--nav-item-selected-color: var(--black);
 
 	--sidewalk-width-s: 100vw;
 	--sidewalk-width-m: 50vw;
 	--sidewalk-width-w: 100vw;
 
-	--bg-sidewalk: rgb(37, 66, 97);
+	--bg-sidewalk: var(--black);
 	--sidewalk-color: var(--white);
 
 	--overlay: rgba(0,0,0,0.5);
@@ -46,17 +46,24 @@
 
 
 	/* Alternate - OnScroll */
-	--bg-navbar2: var(--white);
-	--fg-navbar2: var(--blue);
+	--bg-navbar2: var(--black-trans-9);
+	--fg-navbar2: var(--white);
 
-	--nav-item-hover2: var(--blue);
-	--nav-item-hover-color2: var(--white);
+	--nav-item-hover2: var(--white);
+	--nav-item-hover-color2: var(--black);
 
-	--nav-item-selected2: var(--blue);
-	--nav-item-selected-color2: var(--white);
+	--nav-item-selected2: var(--white);
+	--nav-item-selected-color2: var(--black);
 }
 
-body *{transition: all 0.2s;}
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Quicksand;
+	height: 1000px;
+}
+
+body *{ transition: all 0.2s; }
 
 a{text-decoration: none; color: inherit;}
 
@@ -226,7 +233,10 @@ nav.links{
 	a[class*="nav-item"]{
 		height: 100%;
 		width: 10vw;
-		font-size: 105%;
+	}
+	a.nav-item-selected, a.nav-item-selected:hover{
+		color: var(--nav-item-selected);
+		background-color: var(--nav-item-selected-color);
 	}
 
 	a.nav-item-x:hover{

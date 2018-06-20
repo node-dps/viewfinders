@@ -38,8 +38,8 @@ function scrollFunction() {
 		}
 		links[0].style.borderColor = "var(--white)";
 		if (window.innerWidth > 1025 && selected.length > 0) {
-			selected[0].style.backgroundColor = "var(--nav-item-selected)";
-			selected[0].style.color = "var(--nav-item-selected-color)";
+			selected[0].style.backgroundColor = "var(--nav-item-selected-color)";
+			selected[0].style.color = "var(--nav-item-selected)";
 		}
 		for (var i = nav_item_2.length - 1; i >= 0; i--) {
 			nav_item_2[i].className = nav_item_2[i].className.replace("nav-item-x", "nav-item");

@@ -1,0 +1,26 @@
+body{
+	margin: 0;
+}
+h4{
+	font-size: .1em;
+}
+.name{
+margin-top: 10%;
+position: fixed;
+}
+.gg{
+	padding-top: 10%;
+}
+.imagebehave{
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+}
+.head{
+
+
+}
+.box{
+	margin-top: 2%;
+	padding-left: 1%;
+	border: solid 1px rgba(0,0,0,.1);
+}

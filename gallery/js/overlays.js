@@ -26,7 +26,7 @@ function open_image(e){
 	var overlay = document.querySelector('.overlay-primary');
 	var overlay_img = document.querySelector('.overlay-primary div.image');
 
-	overlay_img.style.backgroundImage = 'url("' + img_src + '")';
+	overlay_img.style.backgroundImage = 'url("originals/' + img_src + '")';
 	show_element(overlay);
 	
 	freeze_body();

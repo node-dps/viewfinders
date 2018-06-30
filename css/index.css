@@ -30,3 +30,7 @@ position: fixed;
 	border-top: solid 2px rgba(0,0,0,.4);
 	border-bottom: solid 2px rgba(0,0,0,.4);
 }
+.overlay-primary{
+	background: white;
+	padding: 1% 1% 1% 1%;
+}

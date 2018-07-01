@@ -39,4 +39,4 @@ function close_image(){
 
     unfreeze_body();
 }
-console.log("gg")
+console.log("We")

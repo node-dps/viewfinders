@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:900");
-/**
-  * style variables
-*/
-/**
-  * Control & indicator mixin
+/*
+hello children
+don't touch this 
 */
 .carousel {
   height: 50vh;
@@ -13,21 +11,7 @@
   position: relative;
   padding: 0;
   list-style: none;
-/**
-  * Where the magic happens
-  */
-/**
-    * Control element - right/left arrows
-  */
-/**
-    * Element for holding slide indicators
-  */
-/**
-    * Indicator for indicating active slide
-  */
-/**
-    * Create rules for when slides are contained within a track
-  */
+
 }
 .carousel__controls,
 .carousel__activator {
